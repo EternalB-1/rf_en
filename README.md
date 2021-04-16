@@ -27,7 +27,7 @@ cd rf
 
 python3 recieve.py -g 20
 
-</h2>To send a signal (if you receive a signal at this time, create a new session):</h2>
+<h2>To send a signal (if you receive a signal at this time, create a new session):</h2>
 
 cd rf
 
