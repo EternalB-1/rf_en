@@ -1,43 +1,44 @@
-# РАБОТА С ПЕРЕДАТЧИКАМИ НА ЧАСТОТЕ 433Мгц С ПОМОЩЬЮ RASPBERRY PI
+<h2># WORKING WITH 433MHz TRANSMITTERS WITH RASPBERRY PI</h2>
 
-На этих частотах работают современные шлагбаумы, электронные ворота и некоторые электронные замки. Считав значения с приемника, когда идет сигнал с пульта для открытия чего-либо, вы можете повторить этот сигнал, тем самым открыть/закрыть цель.
+Modern barriers, electronic gates, and some electronic locks operate on these frequencies. By reading the values from the receiver when there is a signal from the remote control to open something, you can repeat this signal, thereby opening/closing the target.
 
-Для приема и передачи используются такие типы модулей:
+<h3>The following types of modules are used for receiving and transmitting:</h3>
 
 ![alt text](https://static-sl.insales.ru/images/products/1/1171/141264019/1070.jpg)
 ![alt text](https://ae01.alicdn.com/kf/HTB1day5aULrK1Rjy1zbq6AenFXa6/QIACHIP-433-Mhz.jpg)
 
-Их я подключил по схеме:
+<h3>I connected them according to the scheme:</h3>
 
 ![alt text](https://github.com/EternalB-1/rf/blob/master/img/Screenshot_1.png?raw=true)
 
-
-После этого вам нужно установить библиотеку:
+<h3>After that, you need to install the library:</h3>
 
 pip3 install rpi-rf
 
-Если у вас возникли проблемы с установкой библиотеки rpi-rf, в репозитории есть папка с ней. Для ее установки вручную введите:
+<h2>If you have any problems installing the rpi-rf library, there is a folder with it in the repository. To install it manually, enter:</h2>
 
 cd rf/rpi-rf-0.9.6
 
 sudo python3 setup.py install
 
-Для приема сигнала введите:
+<h3>To receive a signal, enter:</h3>
 
 cd rf
 
 python3 recieve.py -g 20
 
-Для отправки сигнала (если вы принимаете сигнал в это время, создайте новую сессию):
+</h3>To send a signal (if you receive a signal at this time, create a new session):</h3>
 
 cd rf
 
 python3 send.py -g 21 -t * -p ** ***
 
-*-протокол
+*- protocol
 
 **-pulse
 
-***-код устройства
+***- device code
 
-Вся информация взята из ролика: https://youtu.be/HCiEaf1HPhE
+
+
+All information is taken from the video: https://youtu.be/HCiEaf1HPhE
