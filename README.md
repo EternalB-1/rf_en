@@ -11,7 +11,9 @@ Modern barriers, electronic gates, and some electronic locks operate on these fr
 
 ![alt text](https://github.com/EternalB-1/rf/blob/master/img/Screenshot_1.png?raw=true)
 
-<h3>After that, you need to install the library:</h3>
+<h3>After that, you need to install the library and repository:</h3>
+
+git clone https://github.com/EternalB-1/rf_ru
 
 pip3 install rpi-rf
 
